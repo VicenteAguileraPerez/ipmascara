@@ -9,5 +9,5 @@ This project classify the IP Addresses according to the network mask.
  ![](imagenes/ejemplo2.jpg)
  
   ### 2. Gif
-  ![](imagenes/gif.gif )
+  ![](imagenes/gif.gif)
  
