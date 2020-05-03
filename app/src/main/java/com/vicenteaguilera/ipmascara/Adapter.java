@@ -17,6 +17,7 @@ import java.util.List;
 public class Adapter extends BaseAdapter {
     private List<RedModel> redes;
     private LayoutInflater layoutInflater;
+    private LayoutInflater layoutInflaterHeader;
     private Context context;
 
     public Adapter(List<RedModel> redes, Context context)
@@ -24,6 +25,7 @@ public class Adapter extends BaseAdapter {
         this.redes = redes;
         this.context=context;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        layoutInflaterHeader = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -48,11 +50,12 @@ public class Adapter extends BaseAdapter {
 
         view = layoutInflater.inflate(R.layout.item_red,viewGroup,false);
         TextView NetworkAddress = view.findViewById(R.id.textView_red);
-        TextView Mask = view.findViewById(R.id.textView_mascara);
-        ListView listView_networks = view.findViewById(R.id.listView_redes);
 
-        NetworkAddress.setText("Red: "+redes.get(position).getRed());
-        Mask.setText("Máscara: "+redes.get(position).getMascara());
+        ListView listView_networks = view.findViewById(R.id.listView_redes);
+        NetworkAddress.setText("Red: "+redes.get(position).getRed()+"    "+redes.get(position).getMascara());
+
+
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, redes.get(position).getRedes());
         listView_networks.setAdapter(arrayAdapter);
 

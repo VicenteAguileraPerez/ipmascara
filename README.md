@@ -8,3 +8,6 @@ This project classify the IP Addresses according to the network mask.
  ### 2. Table with IPs
  ![](imagenes/ejemplo2.jpg)
  
+  ### 2. Gif
+  ![](imagenes/gif.gif)
+ 
